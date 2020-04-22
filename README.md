@@ -4,7 +4,7 @@ Note : Make sure you have Python version 3.8+
 
 # Environment Setup
 
-'$ git clone https://github.com/Akash1362000/django_project_blogapp.git'
+'''$ git clone https://github.com/Akash1362000/django_project_blogapp.git'''
 
 '$ cd django_project_blogapp/'
 
