@@ -66,6 +66,10 @@ Every time you want to open the application in browser, make sure you run:
 
 `$ python manage.py runserver`
 
+### Contributors 😃
+
+![contributors](https://contributors-img.web.app/image?repo=Akash1362000/Django_BlogApp)
+
 ### License ✍
 
 ```
