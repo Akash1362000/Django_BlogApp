@@ -6,3 +6,18 @@
 
 ### Development 👨‍💻
 **Note** : Make sure you have Python version 3.8+
+
+### Environment Setup 🚀
+
+`$ git clone https://github.com/Akash1362000/django_project_blogapp.git`
+
+`$ cd django_project_blogapp/`
+
+If virtualenv is not installed [(What is virtualenv?)](https://www.youtube.com/watch?v=N5vscPTWKOk&t=313s):
+
+`$ pip install virtualenv`
+
+Create a virtual environment
+
+`$ virtualenv venv`
+
