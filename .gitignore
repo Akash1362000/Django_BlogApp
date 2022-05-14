@@ -1,2 +1,10 @@
 .vscode
-venv
+env/
+.gitignore
+db
+db.*
+*.txt
+__pycache__/
+.env
+.vscode
+.vscode/settings.json

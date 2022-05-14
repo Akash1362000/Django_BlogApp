@@ -1,0 +1,10 @@
+{% extends 'blog/base.html' %}
+ {% block title %} Create Post
+  {% endblock title%} {% block content %}
+<form method="post">
+  {% csrf_token %}
+  <h2>Ary you Sure you want to delete {{object.title}}</h2>
+  <input type="submit" value="Delete" />
+  <a href="{% url 'get_post' object.id %}">Cancel</a>
+</form>
+{% endblock content %}
