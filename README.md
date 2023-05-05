@@ -8,6 +8,8 @@
 
 ![BlogApp Demo](https://i.imgur.com/mpntklM.gif)
 
+### Checkout the live website [here](https://blog-app-w21y.onrender.com)
+
 ### Development 👨‍💻
 **Note** : Make sure you have Python version 3.8+
 
