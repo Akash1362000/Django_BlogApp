@@ -33,7 +33,7 @@ Install requirements 🛠
 
 `$ pip install -r requirements.txt`
 
-Run migrations for Database 
+Run migrations for Database
 
 `$ python manage.py makemigrations`
 
@@ -48,9 +48,9 @@ Enter your desired username, email and password. Make sure you remember them as 
 eg.
 
     Username: admin
-    
+
     Email: admin@admin.com
-    
+
     Password: HighlyConfidentialPassword
 
 All Set! 🤩
@@ -96,6 +96,6 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE. 
-```  
+SOFTWARE.
+```
 Leave a ⭐ from [here](https://github.com/Akash1362000/Django_BlogApp) if you like 😁
