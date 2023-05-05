@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    volumes:
+      - .:/blog_app
+    ports:
+      - 8000:8000
+    image: blog_app:django
+    container_name: blog_app
+    command:
+      - /bin/bash
+      - -c
+      - |
+        python3 ./manage.py migrate
+        python3 ./manage.py collectstatic --noinput
+        python3 ./manage.py runserver 0.0.0.0:8000
