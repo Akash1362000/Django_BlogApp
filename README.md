@@ -91,9 +91,13 @@ If you want to use Docker to run this project, you need to do the following step
 ---
 
 
-### Contributors 😃
+## Stargazers
 
-![contributors](https://contributors-img.web.app/image?repo=Akash1362000/Django_BlogApp)
+[![Stargazers](https://reporoster.com/stars/Akash1362000/Django_BlogApp)](https://github.com/Akash1362000/Django_BlogApp/stargazers)
+
+Leave a ⭐ from [here](https://github.com/Akash1362000/Django_BlogApp) if you like 😁
+
+---
 
 ### License ✍
 
@@ -120,4 +124,3 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
-Leave a ⭐ from [here](https://github.com/Akash1362000/Django_BlogApp) if you like 😁
