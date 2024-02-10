@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .models import Post
 from .forms import PostForm
@@ -26,3 +26,24 @@ def create_post(request):
         messages.error(request, 'Please correct the following errors:')
         form=PostForm()
     return render(request,'blog/create_post.html',{'form':form})
+
+@login_required
+def update_post(request, pk):
+    post=get_object_or_404(Post, pk=pk)
+
+    if request.method == "POST":
+        form=PostForm(request.POST, instance=post)
+        if form.is_valid():
+            user=form.save()
+            user.author=request.user
+            user.save()
+            messages.info(request, "Post has been updated successfully")
+            # Redirect To Detail Page
+            return redirect('')
+        
+        messages.error(request,"Please correct the following error !!")
+        
+    else :
+        form=PostForm(instance=post)
+        
+    return render(request, "blog/update_post.html", {'form':form})
