@@ -21,8 +21,9 @@ def create_post(request):
             user.author=request.user
             user.save()
             messages.success(request, 'The post has been created successfully.')
-            return redirect('home')
+            return redirect('blog-home')
+        else:
+            messages.error(request, 'Please correct the following errors:')
     else:
-        messages.error(request, 'Please correct the following errors:')
         form=PostForm()
     return render(request,'blog/create_post.html',{'form':form})
