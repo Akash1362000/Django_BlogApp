@@ -1,6 +1,6 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import redirect, render
+from django.shortcuts import get_object_or_404, redirect, render
 
 from .forms import PostForm
 from .models import Post
@@ -13,6 +13,12 @@ def home(request):
 
 def about(request):
     return render(request, "blog/about.html", {"title": "About"})
+
+
+def post_detail(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    context = {"post": post}
+    return render(request, "blog/post_detail.html", context)
 
 
 @login_required
