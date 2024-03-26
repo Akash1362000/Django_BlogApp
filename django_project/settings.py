@@ -136,7 +136,7 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-CSRF_TRUSTED_ORIGINS= ["https://announcement.teadao.money"]
+CSRF_TRUSTED_ORIGINS= ["https://api-announcement.teadao.money"]
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
