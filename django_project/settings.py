@@ -143,7 +143,7 @@ CSRF_TRUSTED_ORIGINS= ["https://api-announcement.teadao.money"]
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'PAGE_SIZE': 10
+    'PAGE_SIZE': 12
 }
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
