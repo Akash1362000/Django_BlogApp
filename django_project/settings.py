@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    "corsheaders"
     "users.apps.UsersConfig",
     "blog.apps.BlogConfig",
     "crispy_forms",
@@ -48,6 +49,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     # Uncomment the below line while deploying the app
     # "whitenoise.middleware.WhiteNoiseMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -180,3 +182,32 @@ MDEDITOR_CONFIGS = {
 # enabling media uploads
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 MEDIA_URL = '/media/'
+
+
+CORS_ALLOW_HEADERS = [
+    "accept",
+    "accept-encoding",
+    "authorization",
+    "content-type",
+    "dnt",
+    "origin",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
+    "baggage",
+    "sentry-trace",
+]
+CORS_ALLOW_CREDENTIALS = True
+
+if DEBUG:
+    CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "https://announcement.teadao.money",
+]
+
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    "http://localhost:3000",
+    "https://announcement.teadao.money",
+]
