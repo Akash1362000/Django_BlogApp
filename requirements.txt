@@ -7,4 +7,4 @@ whitenoise==6.4.0
 djangorestframework
 django-filter
 django-mdeditor
-django-cors-headers==4.2.0
+django-cors-headers
