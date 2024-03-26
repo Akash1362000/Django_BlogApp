@@ -1,9 +1,14 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.http import Http404
 from django.shortcuts import get_object_or_404, redirect, render
+from rest_framework import generics
+from rest_framework.response import Response
+from rest_framework.views import APIView
 
 from .forms import PostForm
 from .models import Post
+from .serializer import PostSerializer
 
 
 def home(request):
@@ -36,3 +41,25 @@ def create_post(request):
     else:
         form = PostForm()
     return render(request, "blog/create_post.html", {"form": form})
+
+
+class BlogListView(generics.ListAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+
+
+class BlogDetailView(APIView):
+    """
+        Retrieve, update or delete a snippet instance.
+        """
+
+    def get_object(self, slug):
+        try:
+            return Post.objects.get(slug=slug)
+        except Post.DoesNotExist:
+            raise Http404
+
+    def get(self, request, slug, format=None):
+        snippet = self.get_object(slug)
+        serializer = PostSerializer(snippet)
+        return Response(data=serializer.data, content_type="application/json")
