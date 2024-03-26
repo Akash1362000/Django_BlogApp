@@ -44,7 +44,7 @@ def create_post(request):
 
 
 class BlogListView(generics.ListAPIView):
-    queryset = Post.objects.all()
+    queryset = Post.objects.all().order_by("-date_posted")
     serializer_class = PostSerializer
 
 
