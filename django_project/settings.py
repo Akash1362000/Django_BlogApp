@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     "rest_framework",
     "mdeditor",
     "corsheaders",
-    "announcement",
 ]
 
 MIDDLEWARE = [

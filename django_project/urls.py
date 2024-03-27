@@ -37,7 +37,6 @@ urlpatterns = [
     ),
     path("", include("blog.urls")),
     path("mdeditor/", include("mdeditor.urls")),
-    path("tea-announcement/", include("announcement.urls"))
 ]
 
 if settings.DEBUG:

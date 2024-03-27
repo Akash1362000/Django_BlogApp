@@ -2,7 +2,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.http import Http404
 from django.shortcuts import get_object_or_404, redirect, render
-from rest_framework import generics
+from rest_framework import generics, filters
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
@@ -46,7 +46,8 @@ def create_post(request):
 class BlogListView(generics.ListAPIView):
     queryset = Post.objects.all().order_by("-date_posted")
     serializer_class = PostSerializer
-
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['title', 'content']  # Các trường cần tìm kiếm
 
 class BlogDetailView(APIView):
     """
