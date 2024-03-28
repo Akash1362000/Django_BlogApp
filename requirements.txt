@@ -4,3 +4,7 @@ Pillow==10.2.0
 crispy-bootstrap5==0.7
 gunicorn==20.1.0
 whitenoise==6.4.0
+djangorestframework
+django-filter
+django-mdeditor
+django-cors-headers
